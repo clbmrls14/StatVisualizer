@@ -1,0 +1,7 @@
+
+
+POST http://localhost/register
+Content-type: application/json
+
+{ "name": "Daasdfve" }
+

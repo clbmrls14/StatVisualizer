@@ -1,0 +1,20 @@
+
+
+POST http://localhost/update
+
+Content-type: application/json
+
+{
+    "token": "cda9ed9a-dd73-48e5-ba1a-8d9bbde347ea",
+    "GenerationsComputed": 30,
+    "ResultBoard": [
+        {
+
+            "x": 1,
+
+            "y": 1
+
+        }
+    ]
+}
+

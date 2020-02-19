@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@using System.Linq;
+@{
+    var firstContestant = "winner";
+    var ascending = Model.Stats.Contestants.OrderBy(c => c.Elapsed).ThenBy(c => c != null);
+    ViewData["Title"] = "Home page";
+}
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<meta http-equiv="refresh" content="1" />
+
+<div class="text-center">
+    <h1>Stat Tracker</h1>
+    <ul>
+        @foreach (var contestant in ascending)
+        {
+            <li class="contestant @firstContestant } ">
+                @{ firstContestant = "";}
+                <h2>@contestant.Name</h2>
+                <p>Generations Computed: @contestant.GenerationsComputed</p>
+                <p>Start Time: @contestant.StartedGameAt</p>
+                <p>End Time: @contestant.EndedGameAt</p>
+                @if (contestant.Elapsed != TimeSpan.MaxValue)
+                {
+                    <p>Time Elapsed: @contestant.Elapsed</p>
+                }
+                
+            </li>
+        }
+    </ul>
+</div>

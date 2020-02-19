@@ -1,0 +1,10 @@
+
+
+POST http://localhost/update
+Content-type: application/json
+
+{
+    "token": "2b457ed0-e627-4f17-aaf5-9608ee342337",
+    "GenerationsComputed": 320
+}
+
